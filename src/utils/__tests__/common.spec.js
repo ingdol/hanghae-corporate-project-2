@@ -14,7 +14,7 @@ describe('pick 유틸리티 단위 테스트', () => {
     };
 
     // Act: `pick` 함수 호출
-    const result = pick(obj, ['a']);
+    const result = pick(obj, 'a');
 
     // Assert: 결과가 예상한 객체와 일치하는지 확인
     expect(result).toEqual({ a: 'A' });
@@ -33,7 +33,7 @@ describe('pick 유틸리티 단위 테스트', () => {
     };
 
     // Act: `pick` 함수 호출
-    const result = pick(obj, ['a', 'b']);
+    const result = pick(obj, 'a', 'b');
 
     // Assert: 결과가 예상한 객체와 일치하는지 확인
     expect(result).toEqual({ a: 'A', b: { c: 'C' } });
@@ -70,7 +70,7 @@ describe('pick 유틸리티 단위 테스트', () => {
     };
 
     // Act & Assert: `pick` 함수 호출 시 에러가 발생하는지 확인
-    expect(() => pick(obj, ['x'])).toThrow();
+    expect(() => pick(obj, 'x')).toThrow();
   });
 });
 
