@@ -1,7 +1,7 @@
 export const pick = (obj, ...propNames) => {
   const result = {};
 
-  propNames.forEach((key) => {
+  propNames.flat().forEach((key) => {
     if (key in obj) {
       result[key] = obj[key];
     } else {
